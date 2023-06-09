@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fs-h1-legend: 3.2rem;
+  --fs-astronaut-footer: 2rem;
+  --fs-h3: 3rem;
+  --fs-p-card-input: 1.6rem;
+  --fs-button: 1.4rem;
+
+  --ff-body: "Mulish", sans-serif;
+  
+  --fc-p: #312d64;
+  --fc-button: #ffffff;
+  --fc-tittle: #b52184;
+  
+  --bg-cards: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+  --bg-body: #f9f4fb;
+  --bg-card: #ffffff;  
+  --bg-hover:#292597
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-body);
+  background: var(--bg-body);
+}
+
+#astronaut {
+  width: 43.0rem;
+  height: 67.9rem;
+  padding: 0 3.4rem 9.3rem 3.2rem;
+
+  animation: LeftRigth 2s 300ms backwards;
+}
+
+#astronaut .space img {
+  width: 100%
+}
+
+#astronaut .title-astronaut h1 { 
+  font-style: normal;
+  font-weight: 900;
+  font-size: var(--fs-h1-legend);
+
+  line-height: 4rem;
+  text-align: center;
+
+  color: var(--fc-tittle);
+  margin-top: 1.7rem;
+}
+
+#astronaut .title-astronaut p {
+  font-weight: 600;
+  font-size: var(--fs-astronaut-footer);
+  line-height: 2.5rem;
+  
+  text-align: center;
+  color: var(--fc-p);
+  
+  margin-top: 5px;
+  margin-bottom: 3.5rem;
+}
+
+#astronaut .button-down {
+  width: 5.8rem;
+  height: 10.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+#cards {
+  width: 43.0rem;
+  height: 134.2rem;
+
+  display: grid;
+  gap: 5rem;
+
+  background: var(--bg-cards);
+  padding: 5.3rem 3.9rem;
+
+  animation: RigthLeft 2s 300ms backwards;
+}
+
+.card {
+  padding: 2.6rem;
+  border-radius: 2rem;
+  background: var(--bg-card);
+}
+
+.card img{
+  padding-bottom: 3.3rem;
+}
+
+.card h3 { 
+  font-weight: 900;
+  font-size: var(--fs-h3);
+
+  line-height: 3.7rem;
+  color: var(--fc-tittle);
+  
+  margin-bottom: 1.9rem;
+}
+
+.card p {
+  font-weight: 600;
+  font-size: var(--fs-p-card-input);
+
+  line-height: 2rem;
+  color: var(--fc-p);
+}
+
+#contact {
+  width: 4.30rem;
+  height: 56.5rem;
+
+  padding: 7.8rem 3.9rem 6.5rem;
+
+  animation: LeftRigth 2s 300ms backwards;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-weight: 900;
+  font-size: var(--fs-h1-legend);
+
+  line-height: 4rem;
+  color: var(--fc-tittle);
+
+  margin-bottom: 4.3rem;
+}
+
+#contact form input, form textarea {
+  font-weight: 600;
+  font-style: normal;
+  font-size: var(--fs-p-card-input);
+  line-height: 100%;
+
+  border: 0.15rem solid var(--fc-p);
+  border-radius: 1.6rem;
+
+  padding: 1.2rem 1.6rem 1.6rem;
+  color: var(--fc-p);
+
+  width: 34.8rem;
+  
+}
+
+#contact form input {
+  height: 4.8rem;
+}
+
+#contact form textarea {
+  height: 12.6rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  font-family: var(--ff-body);
+  font-weight: 600;
+  font-size: var(--fs-p-card-input);
+
+  line-height: 100%;
+  color: var(--fc-p);
+}
+
+#contact form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 2.4rem;
+}
+
+#contact form button {
+  margin-top: 2.4rem;
+
+  background: var(--bg-cards);
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+
+  font-size: var(--fs-button);
+  font-weight: 700;
+  line-height: 2.4rem;
+
+  color: var(--fc-button);
+  border: none;
+}
+
+#contact form button:hover{
+  filter: brightness(0.9);
+}
+
+#name {
+  background: url(./assets/bonequinho.png) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#email {
+  background: url(./assets/arroba.png) no-repeat scroll 1.4rem 1.2rem;
+}
+
+.stars {
+  display: none;
+}
+
+footer {
+  width: 43.6rem;
+  height: 7.8rem;
+
+  font-weight: 600;
+  font-size: var(--fs-astronaut-footer);
+
+  text-align: center;
+  color: var(--fc-button);
+
+  padding: 3.2rem 1.6rem;
+  background: var(--bg-cards);
+
+  animation: RigthLeft 2s 300ms backwards;
+}
+
+@keyframes LeftRigth {
+  0% {
+    opacity: 0;
+    transform: translatex(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes RigthLeft {
+  0% {
+   opacity: 0;
+   transform:translatex(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@media (min-width: 584px) {
+  #astronaut {
+    width: 103.0rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 2.9rem 10.3rem;
+    align-items: center;
+  }
+
+  #astronaut .space {
+    width: 51.9rem;
+    height: 63.2rem;
+  }
+
+  #astronaut .title-astronaut {
+    margin-right: 2.8rem;
+  }
+
+  #cards {
+    width: 103.0rem;
+    height: 60.0rem;
+    display: flex;
+  }
+
+  #cards .card {
+    height: 50.0rem;
+  }
+
+  #contact {
+    width: 103.0rem;
+    background-image: url(./assets/stars.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  footer {
+    width: 103.0rem;
+  }
+}
+
+@media (min-width: 1030px) {
+  #astronaut {
+    width: 144.0rem;
+    height: 83.6rem;
+  }  
+
+  #astronaut .space {
+    width: 71.9rem;
+    height: 73.2rem;
+    margin-bottom: 10.3rem;
+  }
+
+  #astronaut .title-astronaut h1 {
+    font-weight: 900;
+    font-size: 5.8rem;
+    line-height: 7.3rem;
+    
+    margin-right: 2.8rem; 
+  }
+
+  #astronaut .title-astronaut p {
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  #astronaut .button-down {
+    position: absolute;
+    bottom: 5rem;
+  }
+
+  #cards {
+    width: 144.0rem;
+    height: 57.6rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row;
+    align-items: center;
+  }
+
+  #cards .card {
+    width: 36.6rem;
+    height: 44.8rem;
+  }
+
+  #cards .card h3 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  #cards .card p {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  #contact {
+    width: 144.0rem;
+    height: 61.2rem;
+  }
+
+  #contact form legend {
+    font-weight: 900;
+    font-size: 4.2rem;
+    line-height: 5.3rem;
+  }
+
+  #contact form input {
+    width: 59.2rem;
+    height: 4.8rem;
+  }
+
+  #contact form textarea {
+    width: 59.2rem;
+    height: 12.6rem
+  }
+
+  footer {
+    width: 144.0rem;
+    height: 7.8rem;
+  }
+
+  footer p {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #astronaut {
+    width: 100%;
+  }
+
+  #astronaut .button-down {
+    top: 59.5rem;
+  }
+
+  #cards {
+    width: 100%;
+  }
+
+  #contact {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
